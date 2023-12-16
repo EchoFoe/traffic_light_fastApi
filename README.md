@@ -41,5 +41,3 @@
     ```
     python tg_weather_bot.py
     ```
-   
-#### Найти бота в ТГ можно так https://t.me/fast_api_weather_echo_bot
