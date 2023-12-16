@@ -3,16 +3,16 @@ import httpx
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import JSONResponse
 
-from keys_settings import settings
+from keys_settings import WEATHER_API_URL, GEOCODE_API_KEY, WEATHER_API_KEY
 from utils import WeatherData, get_yandex_geocode_data, get_cached_weather_data, set_cached_weather_data
 
 
 app = FastAPI(title='Weather Ya API')
 
 
-geocode_api_key = settings['GEOCODE_API_KEY']
-weather_api_url = settings['WEATHER_API_URL']
-weather_api_key = settings['WEATHER_API_KEY']
+geocode_api_key = GEOCODE_API_KEY
+weather_api_url = WEATHER_API_URL
+weather_api_key = WEATHER_API_KEY
 
 
 async def fetch_weather_data(city: str):

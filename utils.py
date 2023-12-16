@@ -1,9 +1,9 @@
 import requests
-from keys_settings import settings
+from keys_settings import YA_GEOCODE_MAPS_URL
 from cachetools import TTLCache
 from pydantic import BaseModel
 
-ya_geocode_maps_url = settings['YA_GEOCODE_MAPS_URL']
+ya_geocode_maps_url = YA_GEOCODE_MAPS_URL
 cache = TTLCache(maxsize=100, ttl=30 * 60)
 
 

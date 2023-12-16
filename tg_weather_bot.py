@@ -2,12 +2,12 @@ from aiogram import Bot, types
 from aiogram import Dispatcher
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-from keys_settings import settings
+from keys_settings import TELEGRAM_BOT_TOKEN, TELEGRAM_BOT_NAME
 from main import fetch_weather_data
 
-bot = Bot(token=settings['TELEGRAM_BOT_TOKEN'])
+bot = Bot(token=f'{TELEGRAM_BOT_TOKEN}')
 dp = Dispatcher(bot)
-telegram_bot_name = settings['TELEGRAM_BOT_NAME']
+telegram_bot_name = TELEGRAM_BOT_NAME
 
 
 @dp.message_handler(commands=['start', 'help'])
